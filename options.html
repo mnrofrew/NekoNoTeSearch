@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Parallel Web Search "Neko no Te" Options</title>
+</head>
+
+<body style="font-size:12px;font-family:Geneva">
+
+  <div style="margin-bottom: 5px;font-size:20px;font-family:Geneva">
+    <b>Neko no Te - Parallel Web Search Tool</b>
+    <br />
+  </div>
+
+  <div style="width: 400px;margin-bottom: 15px">
+    <b>Useage:</b><br />
+    Press ctrl+L, type "neko" + space in the address bar, type search keyword, and hit enter.
+    Then the browser will open multiple tabs and show search results from all search engines listed below
+    <br />
+  </div>
+
+  <div style="width: 400px;margin-bottom: 15px">
+    <div>
+      <b>Options:</b><br />
+      Feel free to modify the list below. %s will be the search keyword that gets sent to the tabs.
+      If you put a # at the beggining of the line, that line would be ignored
+      If you put a search URL that is not really a URL, the extension withh comment that out.
+    </div>
+    <br />
+    <button id="save">Save</button>
+    <button id="reset">Reset</button>
+    <div id="response" style="font-size:12px;"></div>
+    <textarea id="urls" title="urls" cols="100" rows="20"
+      style="margin-top:8px;width: 400px;font-size:12px;font-family:Consolas"></textarea>
+    <br/>
+  </div>
+
+  <div style="width: 400px;margin-bottom: 5px">
+    <b>Notes:</b><br />
+    The search engine URLs should be synchronized over cloud
+    <br />
+  </div>
+
+</body>
+<script src="options.js"></script>
+</html>
