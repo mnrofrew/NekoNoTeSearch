@@ -47,6 +47,10 @@ function resetURLs()
         '','Shopping Sites',
         'https://smile.amazon.com/s?k=%s',
         'https://www.amazon.co.jp/s?k=%s',
+        '', 'Videos',
+        'https://www.youtube.com/results?search_query=%s',
+        'https://www.dailymotion.com/search/%s/videos',
+        'https://www.nicovideo.jp/search/%s'
     ].join('\n');
     console.log('Initialized Search URLs.');
     saveURLs(urls.value);

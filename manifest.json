@@ -8,7 +8,7 @@
     "persistance": false,
     "service_worker": "background.js"
   },
-  "permissions": ["storage", "activeTab", "scripting"],
+  "permissions": ["storage", "scripting"],
   "icons": {
     "16": "/images/nipi.png",
     "32": "/images/nipi.png",
