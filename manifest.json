@@ -1,14 +1,14 @@
 {
   "name": "Neko no Te",
   "description": "a tiny extension to let one search in multiple search engines in one shot",
-  "version": "1.0",
+  "version": "1.1",
   "manifest_version": 3,
   "omnibox": {"keyword": "neko"},
   "background": {
     "persistance": false,
     "service_worker": "background.js"
   },
-  "permissions": ["storage", "scripting"],
+  "permissions": ["storage", "scripting", "contextMenus", "tabs"],
   "icons": {
     "16": "/images/nipi.png",
     "32": "/images/nipi.png",
