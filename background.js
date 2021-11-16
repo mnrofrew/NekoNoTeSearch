@@ -1,6 +1,7 @@
 function search(text) {
     if (text != "")
         chrome.storage.sync.get("urls", (data) => {
+            console.log("Opening Search Tabs");
             for(let url_line of data["urls"].match(/[^\r\n]+/g)){
                 if (url_line.trim().charAt(0) != '#'){
                     let search_query = url_line.replace('%s', text);
@@ -9,9 +10,9 @@ function search(text) {
                         url: search_query,
                         active: false,
                     });
-
                 };
             };
+            console.log("Serach Tabs were opened");
         });
     else
         console.log("Neko is sad... Seach Text is Empty...");
@@ -24,9 +25,8 @@ function listen_to_menu_click(){
             console.log("Neko no Te Context Menu Search was Triggered")
             search(OnClickData.selectionText);
         }
-
     });
-    //console.log("Listner for Neko No Te Context Menu was added")
+    console.log("Listner for Neko No Te Context Menu was added")
 }
 
 chrome.runtime.onInstalled.addListener(() => {
@@ -36,12 +36,12 @@ chrome.runtime.onInstalled.addListener(() => {
         contexts: ["selection"],
         id: "NekoNoTeSearchMenuItem",
     }, listen_to_menu_click)
-    //console.log("Neko No Te Context Menu was created")
+    console.log("Neko No Te Context Menu was created")
 
     chrome.tabs.create({ url: "options.html" });
 });
 
 chrome.omnibox.onInputEntered.addListener((text, OnInputEnteredDisposition) => {
-    //console.log("Neko no Te Omnibox Search was Triggered")
+    console.log("Neko no Te Omnibox Search was Triggered")
     search(text);
 });
